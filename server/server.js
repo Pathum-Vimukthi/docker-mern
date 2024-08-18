@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 
 //import user model
@@ -10,10 +11,7 @@ app.use(cors());
 
 //connect to mongodb
 mongoose
-  .connect("mongodb://localhost:27017/userDB", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect("mongodb://localhost:27017/userDB")
   .then(() => {
     console.log("Connected to MongoDB");
   })
