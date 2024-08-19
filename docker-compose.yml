@@ -1,6 +1,6 @@
 services:
   mongo:
-    image: mongo:latest
+    image: mongo
     container_name: mongo_container
     ports:
       - "27017:27017"
@@ -32,5 +32,6 @@ services:
     volumes:
       - ./client:/app
       - /client/node_modules
+
 volumes:
   mongo_data:
